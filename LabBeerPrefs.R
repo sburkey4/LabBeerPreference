@@ -52,17 +52,20 @@ ggsave("Figures/LabBeerPrefs.jpg", p1B, width = 18.5, height=14, units=c("cm"), 
 
 ###########
 # 4. Take it a step further
-## take it a step further and add the Duff beer image to top right corner of your graph
+## take it a step further and add the lab logo and Duff beer image to the graph
 #load additional libraries
 library(cowplot)
 library(magick)
 
+#Nick - do you prefer the duff logo or lab logo?
+
 #run the code below
 ggdraw() +
   draw_plot(p1B)+
-  draw_image("SourceData/duff_beer.jpeg",  x = 0.425, y = 0.4, scale = .2) 
+  draw_image("SourceData/bld-logo.jpg",  x = 0.385, y = 0.4, scale = .2) +
+  draw_image("SourceData/Duff_beer.jpg",  x = 0.385, y = -0.3, scale = .2) 
 
-ggsave("Figures/LabBeerPrefsDuff.jpg", width = 18.5, height=14, units=c("cm"), dpi = 300)
+ggsave("Figures/LabBeerPrefsLogo.jpg", width = 18.5, height=14, units=c("cm"), dpi = 300)
 ###########
 ###########
 
