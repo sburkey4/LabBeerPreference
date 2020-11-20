@@ -61,8 +61,6 @@ ggsave("Figures/LabBeerPrefs.jpg", p1, width = 18.5, height=14, units=c("cm"), d
 library(cowplot)
 library(magick)
 
-#Nick - do you prefer the duff logo or lab logo?
-#nbm: I actually like the lab logo more, it really makes the graph ours as a lab
 
 #run the code below
 ggdraw() +
