@@ -21,14 +21,14 @@ Tim <- c(5, 6, 3, 1, 2, 7, 4)
 #Lab.mascot <- c(1, 2, 4, 5, 6, 7, 3)
 Nick <- c(2, 1, 7, 6, 5, 4, 3)
 Hana<-c(6, 7, 5, 4, 1, 3, 2)
-
+Mainul<-c(1, 3, 6, 5, 4, 2, 7)
 ###########
 ###########
 
 ###########
 # 2. Add your name in the line of code below
 #compile into a data frame
-df<- data.frame(Beer.Type, Tim, Nick, Hana)
+df<- data.frame(Beer.Type, Tim, Nick, Hana, Mainul)
 ###########
 ###########
 
