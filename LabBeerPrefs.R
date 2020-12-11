@@ -67,7 +67,7 @@ library(magick)
 #run the code below
 ggdraw() +
   draw_plot(p1)+
-  draw_image("SourceData/bld-logo.jpg",  x = 0.385, y = 0.4, scale = .2) +
+  draw_image("SourceData/bld-logo.jpg",  x = 0.385, y = 0.4, scale = .2) 
   #draw_image("SourceData/Duff_beer.jpg",  x = 0.385, y = -0.3, scale = .2) 
 
 ggsave("Figures/LabBeerPrefsLogo.jpg", width = 18.5, height=14, units=c("cm"), dpi = 300)
