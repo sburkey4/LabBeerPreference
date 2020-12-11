@@ -22,20 +22,21 @@ Tim <- c(5, 6, 3, 1, 2, 7, 4)
 Nick <- c(2, 1, 7, 6, 5, 4, 3)
 Hana<-c(6, 7, 5, 4, 1, 3, 2)
 Mainul<-c(1, 3, 6, 5, 4, 2, 7)
+Michelle <- c(6, 1, 3, 7, 2, 4, 5)
 ###########
 ###########
 
 ###########
 # 2. Add your name in the line of code below
 #compile into a data frame
-df<- data.frame(Beer.Type, Tim, Nick, Hana, Mainul)
+df<- data.frame(Beer.Type, Tim, Nick, Hana, Mainul, Michelle)
 ###########
 ###########
 
 ###########
 # 3. Run the rest of the code - the code SHOULD be robust to handle the additional names
 #reshape the dataframe for the plot
-df2<-df%>%
+df2 <-df%>%
   gather(key = "Lab.Member", value="Beer.Preference",-Beer.Type) 
 head(df2)
 
@@ -58,7 +59,7 @@ ggsave("Figures/LabBeerPrefs.jpg", p1, width = 18.5, height=14, units=c("cm"), d
 ###########
 # 4. Take it a step further
 ## take it a step further and add the Duff beer image to top right corner of your graph
-#load additional libraries
+#install & load additional libraries
 library(cowplot)
 library(magick)
 
