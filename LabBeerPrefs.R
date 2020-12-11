@@ -20,7 +20,7 @@ Beer.Type<- c('Pilsner','IPA','Porter', 'Stout', 'Wild/Sour', 'Pale', 'Wheat')
 Tim <- c(5, 6, 3, 1, 2, 7, 4)
 #Lab.mascot <- c(1, 2, 4, 5, 6, 7, 3)
 Nick <- c(2, 1, 7, 6, 5, 4, 3)
-Hana<-c(6, 7, 5, 4, 1, 3, 2)
+Hana<-c(2, 1, 3, 4, 7, 5, 6)
 Mainul<-c(1, 3, 6, 5, 4, 2, 7)
 Michelle <- c(6, 1, 3, 7, 2, 4, 5)
 ###########
