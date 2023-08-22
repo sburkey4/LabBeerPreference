@@ -23,13 +23,16 @@ Nick <- c(2, 1, 7, 6, 5, 4, 3)
 Hana<-c(2, 1, 3, 4, 7, 5, 6)
 Mainul<-c(1, 3, 6, 5, 4, 2, 7)
 Michelle <- c(6, 1, 3, 7, 2, 4, 5)
+
 ###########
 ###########
 
 ###########
 # 2. Add your name in the line of code below
 #compile into a data frame
-df<- data.frame(Beer.Type, Tim, Nick, Hana, Mainul, Michelle)
+#df<- data.frame(Beer.Type, Tim, Nick, Hana, Mainul, Michelle)
+df<- data.frame(Beer.Type, Tim, Nick, Hana, Mainul, Michelle) 
+          
 ###########
 ###########
 
@@ -50,6 +53,26 @@ p1<-ggplot(data=df2, aes(Beer.Type, Beer.Preference, fill = Lab.Member)) +
   guides(fill=guide_legend(title="Lab Member")) #rename legend
 
 plot(p1)
+### Nutz - we get an error if there are more than five people
+#b/c the Zissou1 theme only has five colors
+
+#instead of doing anything fancy; let's create a new palette using two 
+#of Wes' 5-color palettes
+wes.combo<-c(wes_palette("Zissou1"), wes_palette("Darjeeling2"))
+
+#create plot 1 again
+p1<-ggplot(data=df2, aes(Beer.Type, Beer.Preference, fill = Lab.Member)) +
+  geom_bar(position = "dodge", stat = "identity", alpha=1) +
+  #scale_fill_manual(values=wes_palette("Zissou1"))+ #use the Zissou theme
+  scale_fill_manual(values=wes.combo)+ #use the Zissou theme
+  ylab("Least Favorite     <-------------   Beer Preference   ------------>      Favorite") + xlab("Beer Type") + 
+  theme_bw() +
+  theme(axis.text.y=element_blank())+ #remove y-axis tick marks
+  guides(fill=guide_legend(title="Lab Member")) #rename legend
+
+plot(p1)
+
+#looks good
 
 #save updated figure - not done yet! 
 ggsave("Figures/LabBeerPrefs.jpg", p1, width = 18.5, height=14, units=c("cm"), dpi = 300)
