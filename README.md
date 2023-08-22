@@ -6,7 +6,7 @@ An example repo that lab members can use to learn github (pull it down, add a li
 2. Open up the .Rproj file (it will open in R studio with the .R script file open). 
 3. Add a bit of code to the .R file and run the script (instructions in the script). 
 4. Check the figures directory to make sure your beer preferences were added to the list.
-5. Push the entire repo (directory) back up to github so the next person can pull it down. 
+5. Push the entire repo (directory) back up to github so the next person can pull it down. Note: you'll likely need to do a pull request first. 
 
 # Questions?
 
